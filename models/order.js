@@ -19,6 +19,7 @@ lineItemSchema.virtual('extPrice').get(function () {
 
 const orderSchema = new Schema(
 	{
+		user: { type: Schema.Types.ObjectId, ref: 'User' },
 		lineItems: [lineItemSchema],
 		isPaid: { type: Boolean, default: false }
 	},
@@ -40,6 +41,17 @@ orderSchema.virtual('orderId').get(function () {
 	return this.id.slice(-6).toUpperCase();
 });
 
+orderSchema.statics.getCart = function (userId) {
+	return this.findOneAndUpdate(
+		// query
+		{ user: userId, isPaid: false },
+		// update
+		{ user: userId },
+		// upsert option will create the doc if it doesn't exist
+		{ upsert: true, new: true }
+	);
+};
+
 orderSchema.methods.addItemToCart = async function (itemId) {
 	const cart = this;
 	const lineItem = cart.lineItems.find((lineItem) =>
@@ -49,7 +61,7 @@ orderSchema.methods.addItemToCart = async function (itemId) {
 		lineItem.qty += 1;
 	} else {
 		const item = await mongoose.model('Item').findById(itemId);
-		cart.lineItems.push({ item: item });
+		cart.lineItems.push({ item });
 	}
 	return cart.save();
 };

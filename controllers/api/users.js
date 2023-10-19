@@ -1,11 +1,11 @@
-const User = require('../../models/user')
-const jwt = require('jsonwebtoken')
-const bcrypt = require('bcrypt')
+const User = require('../../models/user');
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
 
 const checkToken = (req, res) => {
     console.log('req.user', req.user)
     res.json(req.exp)
-}
+};
 
 const dataController = {
     async createGuest(req, res, next) {
