@@ -1,19 +1,27 @@
-import { useState } from 'react';
+import '../HomePage/HomePage.scss';
+import { useState, useEffect } from "react";
+import * as itemsAPI from "../../utilities/items-api";
+import ItemList from "../../components/ItemList/ItemList";
 
-export default function Home(props) {
-	const [cart, setCart] = useState({})
-	
-	return(
-		<div className="HomePage">
-			<center>
-			<h1>This is the {props.page} page</h1>
-				<div>
-				<img src="https://media.git.generalassemb.ly/user/15881/files/8b5cd280-1f37-11ea-9c27-c9bb294aa61f"/>
-				</div>
-				<div>
-				<img src="https://lh4.googleusercontent.com/Wp6jVNMlvYa2Q8BZ6kIzCbbasfZmNSaWIBJjLKEIDzYB9O6skIt3zyrpqPUjTSXG9WQF23WihWl43h_9UHZtugB96EAulCDDqNtB-KtWYWXJbTTMgHGrG7WU881GACAsrZXe8pJlux6xqGlB46AQliYn=s2048"/>
-				</div>				
-			</center>
+export default function HomePage({ handleAddToOrder, cart }) {
+	const [itemListItems, setItemListItems] = useState([]);
+
+	useEffect(function () {
+		async function getItems() {
+			const items = await itemsAPI.getAll();
+			setItemListItems(items);
+		}
+		getItems();
+	}, []);
+
+	return (
+		<div className="homePage">
+			<ItemList
+				itemListItems={itemListItems}
+				setItemListItems={setItemListItems}
+				handleAddToOrder={handleAddToOrder}
+				cart={cart}
+			/>
 		</div>
-	) 
+	);
 }

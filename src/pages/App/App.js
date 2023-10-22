@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import './App.module.scss';
+import './App.scss';
 import { getUser, makeGuest } from '../../utilities/users-service';
 import CheckoutPage from '../CheckoutPage/CheckoutPage';
 import HomePage from '../HomePage/HomePage';
@@ -46,10 +46,10 @@ export default function App() {
   
   return (
     <main className="App">
-      <NavBar className="NavBar" user={user} setUser={setUser} />
+      <NavBar user={user} setUser={setUser} />
       <Routes>
         {/* client-side route that renders the component instance if the path matches the url in the address bar */}
-        <Route path="/home" element={<HomePage user={user} handleAddToOrder={handleAddToOrder} />} />
+        <Route path="/home" element={<HomePage user={user} handleAddToOrder={handleAddToOrder} cart={cart} />} />
         <Route path="/cart" element={<OrderPage user={user} />} />
         <Route path="/cart/checkout" element={<CheckoutPage user={user} />} />
         <Route path="/*" element={<Navigate to="/home" />} />

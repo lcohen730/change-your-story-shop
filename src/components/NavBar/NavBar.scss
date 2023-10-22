@@ -1,0 +1,32 @@
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--light-pink);
+  padding: 5vmin;
+}
+
+.logo img, .cart img {
+  cursor: pointer;
+}
+
+.title {
+    font-family: 'Londrina Outline', sans-serif;
+    font-size: 15vmin;
+    font-weight: bold;
+}
+
+.cart img {
+  height: 5vmin;
+}
+
+@media only screen and (max-width: 480px) {
+  .navBarTop {
+    margin-right: 15vmin;
+  }
+  
+  .navBarBottom {
+    font-size: 3.5vmin;
+    padding-left: 2vmin;
+    padding-right: 2vmin;
+  }
+}
