@@ -27,8 +27,8 @@ export default function NavBar({ cart }) {
                     <img
                         src={
                             isHoveredCart
-                                ? 'https://i.imgur.com/ZgV76Jx.png'
-                                : 'https://i.imgur.com/H7PI4xJ.png'
+                                ? 'https://cdn-icons-png.flaticon.com/128/2838/2838838.png'
+                                : 'https://cdn-icons-png.flaticon.com/128/2838/2838895.png'
                         }
                         alt="cart"
                     />
