@@ -18,7 +18,7 @@ export default function NavBar({ cart }) {
                     />
                 </Link>
             </div>
-            <div className="title">ONLINE SHOP</div>
+            <div className="title">APPAREL <span>AND</span> NOVELTIES</div>
             <div
                 onMouseEnter={() => setIsHoveredCart(true)}
                 onMouseLeave={() => setIsHoveredCart(false)}

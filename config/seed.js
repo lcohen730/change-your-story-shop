@@ -8,29 +8,24 @@ const Item = require('../models/item');
     await Item.deleteMany({});
     const items = await Item.create([
         {   
-            name: 'Test Item 1',
-            img: "https://i.imgur.com/I1A8fDg.png",
-            price: 1.00 
+            name: 'T-Shirt',
+            img: "https://i.imgur.com/1QQlGnz.png",
+            price: 29.99 
         },
         {   
-            name: 'Test Item 2',
-            img: "https://i.imgur.com/I1A8fDg.png",
-            price: 2.00 
+            name: 'Canvas Bag',
+            img: "https://i.imgur.com/e03G811.png",
+            price: 24.99 
         },
         {   
-            name: 'Test Item 3',
+            name: 'Bracelet',
             img: "https://i.imgur.com/I1A8fDg.png",
-            price: 3.00 
+            price: 14.99 
         },
         {   
-            name: 'Test Item 4',
+            name: 'Mug',
             img: "https://i.imgur.com/I1A8fDg.png",
-            price: 4.00 
-        },
-        {   
-            name: 'Test Item 5',
-            img: "https://i.imgur.com/I1A8fDg.png",
-            price: 5.00 
+            price: 29.99 
         },
     ]);
   

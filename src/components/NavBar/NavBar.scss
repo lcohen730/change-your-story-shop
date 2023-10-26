@@ -10,9 +10,18 @@
 }
 
 .title {
-    font-family: 'Londrina Outline', sans-serif;
-    font-size: 15vmin;
-    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 8vmin;
+    -webkit-text-stroke-width: .3vmin;
+    -webkit-text-stroke-color: var(--hot-pink);
+    color: var(--light-pink);
+    align-self: flex-end;
+}
+
+.title span {
+    -webkit-text-stroke-width: .2vmin;
+    -webkit-text-stroke-color: var(--black);
+    font-size: 5vmin;
 }
 
 .cart img {

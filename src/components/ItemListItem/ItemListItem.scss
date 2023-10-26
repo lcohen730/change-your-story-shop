@@ -12,7 +12,7 @@
 }
 
 .image {
-    width: 45vmin;
+    width: 25vmin;
     height: 25vmin;
     border: none;
 }
@@ -20,17 +20,22 @@
 .itemInfoLine1,
 .itemInfoLine2 {
     display: flex;
-    justify-content: space-between;
     margin-top: 0;
     margin-bottom: 2vmin;
-    margin-right: 1vmin;
     margin-left: 2.5vmin;
 }
 
 .itemInfoLine1 {
     font-size: 1.3vmax;
     margin-bottom: 1vmin;
+    margin-right: 1vmin;
     width: 27vmax;
+    justify-content: space-between;
+}
+
+.itemInfoLine2 {
+    justify-content: flex-end;
+    margin-right: 2vmin;
 }
 
 button {
