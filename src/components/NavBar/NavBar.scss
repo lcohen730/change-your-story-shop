@@ -28,6 +28,17 @@
   height: 5vmin;
 }
 
+.cartAmt {
+  background-color: var(--hot-pink);
+  color: var(--white);
+  border-radius: 50%;
+  text-align: center;
+  height: 2vmin;
+  width: 2vmin;
+  margin-left: -20vmin;
+  font-size: 1.4vmin;
+}
+
 @media only screen and (max-width: 480px) {
   .navBarTop {
     margin-right: 15vmin;

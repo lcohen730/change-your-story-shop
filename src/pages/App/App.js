@@ -46,7 +46,7 @@ export default function App() {
   
   return (
     <main className="App">
-      <NavBar user={user} setUser={setUser} />
+      <NavBar user={user} cart={cart} />
       <Routes>
         {/* client-side route that renders the component instance if the path matches the url in the address bar */}
         <Route path="/home" element={<HomePage user={user} handleAddToOrder={handleAddToOrder} cart={cart} />} />
