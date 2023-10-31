@@ -7,10 +7,7 @@ export default function NavBar({ cart }) {
 
     return (
         <div className="navBar">
-            <div
-                onMouseEnter={() => setIsHoveredLogo(true)}
-                onMouseLeave={() => setIsHoveredLogo(false)}
-            >
+            <div>
                 <Link to="/home" className="logo">
                     <img
                         src="https://i.imgur.com/oc3HVWf.png"

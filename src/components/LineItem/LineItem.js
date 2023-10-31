@@ -2,22 +2,22 @@ import { useState } from 'react';
 import './LineItem.scss';
 
 export default function LineItem({ item, handleChangeQty }) {
-  const [qty, setQty] = useState(item.qty)
+  const [qty, setQty] = useState(item.qty);
   const handleChange = (e) => {
     setQty(e.target.value)
-  }
+  };
   const handleSubmit = (e) => {
     e.preventDefault()
-    handleChangeQty(item.item._id, qty)
-  }
+    handleChangeQty(item._id, qty)
+  };
   return (
     <div className="lineItem">
       <div className="leftSide">
         <div className="itemImage">
-          <img className="image" src={item.item.img} alt={item.item.name} />
+          <img className="image" src={item.img} alt={item.name} />
         </div>
         <div className="name">
-          <h2>{item.item.name}</h2>
+          <h2>{item.name}</h2>
         </div>
       </div>
       <div className="rightSide">
@@ -27,7 +27,7 @@ export default function LineItem({ item, handleChangeQty }) {
             <input className="quantityWindow" type='number' value={qty} onChange={(e) => handleChange(e)} />
             <input className="quantityBtn" type='submit' value="CHANGE QUANTITY" />
           </div>
-          <button className="quantityBtn" onClick={() => handleChangeQty(item.item._id, 0)}>REMOVE FROM CART</button>
+          <button className="quantityBtn" onClick={() => handleChangeQty(item._id, 0)}>REMOVE FROM CART</button>
         </form>
       </div>
     </div>

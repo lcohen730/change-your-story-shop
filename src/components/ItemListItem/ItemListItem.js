@@ -8,13 +8,13 @@ export default function ItemListItem({
 }) {
     const [inCart, setInCart] = useState(false);
 
-    /* useEffect(function () {
+    useEffect(function () {
         cart.lineItems.forEach((lineItem) => {
             if (lineItem.item._id === itemListItem._id) {
                 setInCart(true)
             }
         })
-    }, []); */
+    }, []);
 
     return (
         <div className="itemListItem">
