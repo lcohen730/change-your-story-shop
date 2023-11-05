@@ -14,7 +14,7 @@ export default function ItemListItem({
                 setInCart(true)
             }
         })
-    }, []);
+    }, [inCart]);
 
     return (
         <div className="itemListItem">

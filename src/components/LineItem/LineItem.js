@@ -3,13 +3,21 @@ import './LineItem.scss';
 
 export default function LineItem({ item, handleChangeQty }) {
   const [qty, setQty] = useState(item.qty);
+  
   const handleChange = (e) => {
-    setQty(e.target.value)
+    setQty(e.target.value);
   };
+
   const handleSubmit = (e) => {
-    e.preventDefault()
-    handleChangeQty(item.item._id, qty)
+    e.preventDefault();
+    handleChangeQty(item.item._id, qty);
   };
+
+  const handleRemoveFromCart = () => {
+    handleChangeQty(item.item._id, 0);
+    window.location.reload();
+  };
+
   return (
     <div className="lineItem">
       <div className="leftSide">
@@ -27,7 +35,7 @@ export default function LineItem({ item, handleChangeQty }) {
             <input className="quantityWindow" type='number' value={qty} onChange={(e) => handleChange(e)} />
             <input className="quantityBtn" type='submit' value="CHANGE QUANTITY" />
           </div>
-          <button className="quantityBtn" onClick={() => handleChangeQty(item._id, 0)}>REMOVE FROM CART</button>
+          <button className="quantityBtn" onClick={handleRemoveFromCart}>REMOVE FROM CART</button>
         </form>
       </div>
     </div>
