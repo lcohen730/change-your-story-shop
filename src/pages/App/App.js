@@ -14,13 +14,6 @@ export default function App() {
 
   useEffect(function () {
     try {
-      async function getCart() {
-        if (user) {
-          const data = await ordersAPI.getCart();
-          setCart(data);
-        }
-      }
-      getCart();
       async function confirmUser() {
         if (!user) {
           try {
@@ -34,6 +27,13 @@ export default function App() {
         }
       }
       confirmUser();
+      async function getCart() {
+        if (user) {
+          const data = await ordersAPI.getCart();
+          setCart(data);
+        }
+      }
+      getCart();
     } catch (error) {
       console.log(error)
     }

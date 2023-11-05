@@ -8,16 +8,16 @@ export default function LineItem({ item, handleChangeQty }) {
   };
   const handleSubmit = (e) => {
     e.preventDefault()
-    handleChangeQty(item._id, qty)
+    handleChangeQty(item.item._id, qty)
   };
   return (
     <div className="lineItem">
       <div className="leftSide">
         <div className="itemImage">
-          <img className="image" src={item.img} alt={item.name} />
+          <img className="image" src={item.item.img} alt={item.item.name} />
         </div>
         <div className="name">
-          <h2>{item.name}</h2>
+          <h2>{item.item.name}</h2>
         </div>
       </div>
       <div className="rightSide">

@@ -21,7 +21,7 @@ export default function OrderPage({ user }) {
     }
 
     const showOrder = () => (
-        <div className="container">
+        <div>
             <OrderDetail
                 user={user}
                 cart={cart}
@@ -39,8 +39,8 @@ export default function OrderPage({ user }) {
     );
 
     return (
-        <div className="container">
-            <h1>Your Cart</h1>
+        <div className="order">
+            <h1>YOUR CART</h1>
             {cart.lineItems && cart.lineItems.length ? showOrder() : emptyCart()}
         </div>
     )
