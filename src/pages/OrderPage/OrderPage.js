@@ -5,7 +5,7 @@ import OrderDetail from '../../components/OrderDetail/OrderDetail';
 import * as ordersAPI from '../../utilities/orders-api';
 
 export default function OrderPage({ user }) {
-    const [cart, setCart] = useState({})
+    const [cart, setCart] = useState({});
 
     useEffect(function () {
         async function getCart() {
