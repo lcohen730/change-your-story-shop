@@ -5,26 +5,3 @@
     align-items: center;
     margin: 5vmin;
 }
-
-.checkoutForm {
-    border: 0.3vmin solid var(--light-pink);
-    background-color: var(--light-pink);
-    border-radius: 1vmin;
-    display: flex;
-    flex-direction: column;
-    width: 90vmin;
-    margin: 2vmin;
-    padding: 10vmin 20vmin;
-}
-
-.checkoutForm input {
-    margin-bottom: 1vmin;
-}
-
-.checkoutForm button {
-    margin-top: 2vmin;
-    background-color: var(--hot-pink);
-    width: 10vmin;
-    padding: 1vmin;
-    align-self: center;
-}

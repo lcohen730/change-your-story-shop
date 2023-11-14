@@ -1,5 +1,5 @@
 .checkoutForm {
-    border: 0.3vmin solid var(--light-pink);
+    /* border: 0.3vmin solid var(--light-pink); */
     background-color: var(--light-pink);
     border-radius: 1vmin;
     display: flex;
@@ -9,8 +9,28 @@
     padding: 10vmin 20vmin;
 }
 
-.checkoutForm input {
+.checkoutForm h2 {
+    margin-bottom: 2vmin;
+    text-align: center;
+}
+
+.checkoutForm form {
+    display: flex;
+    flex-direction: column;
+    padding: 3vmin;
+}
+
+.checkoutForm form input {
     margin-bottom: 1vmin;
+}
+
+.checkoutForm [name="email"] {
+    margin-bottom: 3vmin;
+}
+
+.customerInfo {
+    border-bottom: 0.3vmin solid var(--black);
+    margin-bottom: 5vmin;
 }
 
 .checkoutForm button {
