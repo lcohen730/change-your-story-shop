@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import './CheckoutPage.scss';
+import CheckoutForm from '../../components/CheckoutForm/CheckoutForm';
 
 export default function CheckoutPage({ user }) {
     const [cart, setCart] = useState({});
@@ -13,7 +15,8 @@ export default function CheckoutPage({ user }) {
 
     return (
         <div className='checkout'>
-            <h1>CHECKOUT PAGE PLACEHOLDER</h1>
+            <h1>CHECKOUT</h1>
+            <CheckoutForm user={user} cart={cart} />
         </div>
     )
 }
