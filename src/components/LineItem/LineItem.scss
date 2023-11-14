@@ -44,24 +44,36 @@
 
                 .quantityWindow {
                     border: .1vmin solid var(--text-pink);
-                    width: 4vmin;
+                    width: 5vmin;
+                    padding-left: 1vmin;
+                    border-top-left-radius: 1vmin;
+                    border-bottom-left-radius: 1vmin;
+                }
+
+                .quantityBtn {
+                    height: 4vmin;
+                    font-size: 2vmin;
+                    padding: 1vmin 2vmin 4vmin;
+                    width: 25vmin;
+                    border-top-right-radius: 1vmin;
+                    border-bottom-right-radius: 1vmin;
+                }
+
+                .quantityBtn:hover {
+                    background-color: var(--text-pink);
                 }
             }
 
-            .quantityBtn {
-                height: 4vmin;
-                font-size: 2vmin;
-                padding: 1vmin 2vmin 4vmin;
-                width: 25vmin;
-            }
-
-            .quantityBtn:hover {
-                cursor: pointer;
-                background-color: var(--text-pink);
-            }
-
-            .quantity button {
+            .removeBtn {
                 margin-right: -100vmin;
+                margin-top: 2vmin;
+                width: 25vmin;
+                color: var(--text-pink);
+            }
+
+            .removeBtn:hover {
+                cursor: pointer;
+                text-decoration: underline;
             }
         }
     }

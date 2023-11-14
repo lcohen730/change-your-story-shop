@@ -35,7 +35,7 @@ export default function LineItem({ item, handleChangeQty }) {
             <input className="quantityWindow" type='number' value={qty} onChange={(e) => handleChange(e)} />
             <input className="quantityBtn" type='submit' value="CHANGE QUANTITY" />
           </div>
-          <button className="quantityBtn" onClick={handleRemoveFromCart}>REMOVE FROM CART</button>
+          <div className="removeBtn" onClick={handleRemoveFromCart}>REMOVE FROM CART</div>
         </form>
       </div>
     </div>
