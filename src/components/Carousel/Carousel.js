@@ -1,18 +1,25 @@
 import { useState } from 'react';
+import './Carousel.scss';
 
 export default function Carousel({ images }) {
     const [currentIdx, setCurrentIdx] = useState(0);
 
     const handleNext = () => {
-        setCurrentIdx((prevIdx) => {
-            prevIdx + 1 === images.length ? 0 : prevIdx + 1
-        });
+        if (currentIdx +1 === images.length) {
+            setCurrentIdx(0);
+        }
+        else {
+            setCurrentIdx(currentIdx + 1);
+        }
     };
 
     const handlePrev = () => {
-        setCurrentIdx((prevIdx) => {
-            prevIdx - 1 < 0 ? images.length - 1 : prevIdx - 1
-        });
+        if (currentIdx - 1 < 0) {
+            setCurrentIdx(images.length - 1);
+        }
+        else {
+            setCurrentIdx(currentIdx - 1);
+        }
     };
 
     return (
