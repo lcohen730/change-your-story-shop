@@ -4,7 +4,7 @@ const Schema = require('mongoose').Schema
 const itemSchema = new Schema(
 	{
 		name: { type: String, required: true },
-		img: String,
+		images: [String],
 		details: String,
 		color: String,
    		size: String,
