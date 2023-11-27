@@ -40,3 +40,8 @@
 .right {
     right: 0;
 }
+
+.left svg, .right svg {
+    margin-top: -3vmin;
+    margin-left: -1.3vmin;
+}
