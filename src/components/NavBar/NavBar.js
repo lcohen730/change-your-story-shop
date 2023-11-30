@@ -30,8 +30,8 @@ export default function NavBar({ cart }) {
                         alt="cart"
                     />
                 </Link>
-            </div>
-            <div className="cartAmt">{cart.totalQty}</div>        
+                <div className="cartAmt">{cart.totalQty}</div>
+            </div>        
         </div>
     );
 }

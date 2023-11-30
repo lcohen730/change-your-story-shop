@@ -29,24 +29,25 @@
 }
 
 .cartAmt {
+  position: absolute;
   background-color: var(--hot-pink);
   color: var(--white);
   border-radius: 50%;
   text-align: center;
   height: 2vmin;
   width: 2vmin;
-  margin-left: -20vmin;
+  margin-top: -5vmin;
   font-size: 1.4vmin;
 }
 
-@media only screen and (max-width: 480px) {
-  .navBarTop {
-    margin-right: 15vmin;
-  }
-  
-  .navBarBottom {
-    font-size: 3.5vmin;
-    padding-left: 2vmin;
-    padding-right: 2vmin;
+/* @media only screen and (max-width: 1000px) {
+  .cart img {
+    margin-left: -15vmax;
   }
 }
+
+@media only screen and (max-width: 480px) {
+  .cart img {
+    margin-left: -25vmax;
+  }
+} */
