@@ -16,12 +16,11 @@ export default function NavBar({ cart }) {
                 </Link>
             </div>
             <div className="title">APPAREL <span>AND</span> NOVELTIES</div>
-            <div
-                onMouseEnter={() => setIsHoveredCart(true)}
-                onMouseLeave={() => setIsHoveredCart(false)}
-            >
+            <div>
                 <Link to="/cart" className="cart">
                     <img
+                        onMouseEnter={() => setIsHoveredCart(true)}
+                        onMouseLeave={() => setIsHoveredCart(false)}
                         src={
                             isHoveredCart
                                 ? 'https://cdn-icons-png.flaticon.com/128/2838/2838838.png'
