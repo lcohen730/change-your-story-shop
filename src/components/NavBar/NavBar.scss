@@ -44,13 +44,20 @@
   font-size: 1.4vmin;
 }
 
-/* @media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1024px) {
   .cart img {
-    margin-left: -15vmax;
+    /* margin-left: -15vmax; */
+    height: 3vmin;
+  }
+  .cartAmt {
+    height: 1.5vmin;
+    width: 1.5vmin;
+    margin-top: -3.5vmin;
+    font-size: 1vmin;
   }
 }
 
-@media only screen and (max-width: 480px) {
+/* @media only screen and (max-width: 480px) {
   .cart img {
     margin-left: -25vmax;
   }

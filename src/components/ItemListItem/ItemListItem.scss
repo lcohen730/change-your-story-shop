@@ -55,6 +55,13 @@ button {
     cursor: not-allowed;
 }
 
+@media only screen and (max-width: 1024px) {
+    .itemInfoLine1 {
+        margin-left: 2vmin;
+        width: 35vw;
+    }
+}
+
 @media only screen and (max-width: 480px) {
     .imageContainer {
         margin-top: -2vmin;

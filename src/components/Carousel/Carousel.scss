@@ -45,3 +45,10 @@
     margin-top: -3vmin;
     margin-left: -1.3vmin;
 }
+
+@media only screen and (max-width: 1024px) {
+    .left svg, .right svg {
+        margin-top: -2vmin;
+        margin-left: -1vmin;
+    }
+}
