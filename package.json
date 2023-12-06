@@ -61,6 +61,7 @@
     "morgan": "^1.10.0",
     "os-browserify": "^0.3.0",
     "path-browserify": "^1.0.1",
+    "react-square-web-payments-sdk": "^3.2.1",
     "serve-favicon": "^2.5.0"
   }
 }

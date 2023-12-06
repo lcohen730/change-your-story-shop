@@ -72,6 +72,10 @@ module.exports = env => {
 				'process.env.CLIENT_ID': JSON.stringify(process.env.CLIENT_ID),
 				'process.env.SECRET': JSON.stringify(process.env.SECRET)
 			}) */
+			new webpack.DefinePlugin({
+				'process.env.SQUARE_APP_ID': JSON.stringify(process.env.SQUARE_APP_ID),
+				'process.env.SQUARE_LOCATION_ID': JSON.stringify(process.env.SQUARE_LOCATION_ID)
+			})
 		],
 		optimization: {
 			splitChunks: {

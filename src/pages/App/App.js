@@ -7,6 +7,7 @@ import HomePage from '../HomePage/HomePage';
 import OrderPage from '../OrderPage/OrderPage';
 import NavBar from '../../components/NavBar/NavBar';
 import * as ordersAPI from '../../utilities/orders-api';
+/* import { PaymentForm } from 'react-square-web-payments-sdk'; */
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -43,17 +44,19 @@ export default function App() {
     const updatedCart = await ordersAPI.addItemToCart(itemId);
     setCart(updatedCart);
   }
-  
+
   return (
-    <main className="App">
-      <NavBar user={user} cart={cart} />
-      <Routes>
-        {/* client-side route that renders the component instance if the path matches the url in the address bar */}
-        <Route path="/home" element={<HomePage user={user} handleAddToOrder={handleAddToOrder} cart={cart} />} />
-        <Route path="/cart" element={<OrderPage user={user} />} />
-        <Route path="/cart/checkout" element={<CheckoutPage user={user} />} />
-        <Route path="/*" element={<Navigate to="/home" />} />
-      </Routes>
-    </main>
+   /*  <PaymentForm> */
+      <main className="App">
+        <NavBar user={user} cart={cart} />
+        <Routes>
+          {/* client-side route that renders the component instance if the path matches the url in the address bar */}
+          <Route path="/home" element={<HomePage user={user} handleAddToOrder={handleAddToOrder} cart={cart} />} />
+          <Route path="/cart" element={<OrderPage user={user} />} />
+          <Route path="/cart/checkout" element={<CheckoutPage user={user} />} />
+          <Route path="/*" element={<Navigate to="/home" />} />
+        </Routes>
+      </main>
+    /* </PaymentForm> */
   )
 }
