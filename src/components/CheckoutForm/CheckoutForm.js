@@ -1,7 +1,10 @@
 import './CheckoutForm.scss';
-import { CreditCardInput, SquarePaymentsForm } from 'react-square-web-payments-sdk';
+import { CreditCard, PaymentForm } from 'react-square-web-payments-sdk';
 
 export default function CheckoutForm({ user, cart }) {
+    const squareAppId = "sandbox-sq0idb-Wuvh3bGjWtnOFEmO9kh3kA";
+    const squareLocationId = "LAJ3KW8FM6EX7";
+    
     return (
         <div className='checkoutForm'>
             <h2>CUSTOMER INFORMATION</h2>
@@ -16,24 +19,16 @@ export default function CheckoutForm({ user, cart }) {
                 <input type="text" name="email" id="email" />
             </form>
             <h2>PAYMENT INFORMATION</h2>
-            {/* <form className='paymentInfo'>
-                <label htmlFor="creditcard">Credit Card: </label>
-                <input type="text" name="creditcard" id="creditcard" />
-                <label htmlFor="expdate">Expiration Date: </label>
-                <input type="text" name="expdate" id="expdate" />
-                <label htmlFor="cvv">CVV: </label>
-                <input type="text" name="cvv" id="cvv" />
-            </form> */}
-            <SquarePaymentsForm
-                applicationId={process.env.SQUARE_APP_ID}
-                locationId={process.env.SQUARE_LOCATION_ID}
+            <PaymentForm
+                applicationId={squareAppId}
+                locationId={squareLocationId}
                 cardTokenizeResponseReceived={ async (token, buyer) => {
                     {/* /* alert(`Token received! \n${JSON.stringify(token)}\n${JSON.stringify(buyer)}` */ }
                     alert(`Token received! \n${JSON.stringify(token, null , 2)}`);
                 }}
             >
-                <CreditCardInput />
-            </SquarePaymentsForm>
+                <CreditCard />
+            </PaymentForm>
             <button type="submit">Submit</button>
         </div>
     )

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import * as ordersAPI from '../../utilities/orders-api';
 import './CheckoutPage.scss';
 import CheckoutForm from '../../components/CheckoutForm/CheckoutForm';
 
