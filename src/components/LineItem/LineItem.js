@@ -22,7 +22,7 @@ export default function LineItem({ item, handleChangeQty }) {
     <div className="lineItem">
       <div className="leftSide">
         <div className="itemImage">
-          <img className="image" src={item.item.img} alt={item.item.name} />
+          <img className="image" src={item.item.images[0]} alt={item.item.name} />
         </div>
         <div className="name">
           <h2>{item.item.name}</h2>
