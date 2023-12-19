@@ -33,6 +33,11 @@
     width: 25px;
 }
 
+.left:hover, .right:hover {
+    background-color: rgba(251, 251, 251, 0.675);
+    cursor: pointer;
+}
+
 .left {
     left: 0;
 }
