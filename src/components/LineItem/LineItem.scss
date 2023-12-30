@@ -2,8 +2,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
-    border-bottom: 1px solid var(--text-pink);
+    padding: 3vmin 5vmin;
+    border-bottom: .1vmin solid var(--text-pink);
+    /* border-radius: 1vmin; */
+    background-color: var(--white);
 
     .leftSide {
         display: flex;

@@ -1,7 +1,7 @@
 .itemListItem {
     background-color: var(--white);
     /* border: 0.3vmin solid rgb(234, 234, 234); */
-    border: 0.3vmin solid var(--light-pink);
+    /* border: 0.3vmin solid var(--light-pink); */
     border-radius: 3vmin;
     margin: 2vmin;
     width: 30vmax;
@@ -33,6 +33,10 @@
     margin-right: 1vmin;
     width: 27vmax;
     justify-content: space-between;
+}
+
+.name {
+    font-size: 1vmax;
 }
 
 .itemInfoLine2 {
