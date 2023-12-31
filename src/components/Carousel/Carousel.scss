@@ -57,3 +57,16 @@
         margin-left: -1vmin;
     }
 }
+
+@media only screen and (max-width: 430px) {
+    .carousel {
+        height: 50vmin;
+        width: 50vmin;
+        margin-top: 5vw;
+    }
+    
+    .left svg, .right svg {
+        margin-top: -5vmin;
+        margin-left: -2.2vmin;
+    }
+}

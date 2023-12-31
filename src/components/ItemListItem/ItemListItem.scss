@@ -52,6 +52,7 @@ button {
 .btnSm {
     background-color: var(--hot-pink);
     border: .1vmin solid var(--hot-pink);
+    font-size: 1vw;
 }
 
 .btnDisabled {
@@ -60,19 +61,48 @@ button {
     cursor: not-allowed;
 }
 
+@media only screen and (max-width: 1370px) {
+    .btnSm, .btnDisabled {
+        font-size: 1.2vw;
+    }
+}
+
 @media only screen and (max-width: 1024px) {
     .itemInfoLine1 {
         margin-left: 2vmin;
-        width: 35vw;
+        /* width: 35vw; */
+    }
+}
+
+@media only screen and (max-width: 935px) {
+    .itemInfoLine1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .name, .price, .btnSm, .btnDisabled {
+        font-size: 1.5vw;
+    }
+
+    .itemInfoLine2 {
+        justify-content: center;
     }
 }
 
 @media only screen and (max-width: 480px) {
-    .imageContainer {
+    .itemListItem {
+        padding-bottom: 2vw;
+    }
+    
+    /* .imageContainer {
         margin-top: -2vmin;
+    } */
+    
+    .itemInfoLine1 {
+        margin-left: 3vw;
     }
 
-    .itemInfoLine1 {
-        width: 80vmin;
+    .name, .price, .btnSm, .btnDisabled {
+        font-size: 13px;
     }
 }
