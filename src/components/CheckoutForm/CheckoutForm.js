@@ -39,7 +39,7 @@ export default function CheckoutForm({ user, cart }) {
             >
                 <CreditCard />
             </PaymentForm>
-            <button type="submit">Submit</button>
+            {/* <button type="submit">Submit</button> */}
         </div>
     )
 }

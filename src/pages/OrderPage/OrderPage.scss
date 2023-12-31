@@ -1,6 +1,7 @@
 .order {
     text-align: center;
     margin: 5vmin 40vmin;
+    overflow: hidden;
 
     h1 {
         font-size: 36px;
@@ -16,9 +17,10 @@
 }
 
 .goToCheckout button {
-    margin-right: -106vmin;
+    /* margin-right: -106vmin; */
     margin-bottom: 5vmin;
     background-color: var(--text-pink);
+    float: right;
 }
 
 .goToCheckout button:hover {
